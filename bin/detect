@@ -3,7 +3,7 @@
 
 detect_typescript() {
   local ctxDir=$1
-  test -d $ctxDir && test -n "$(find $ctxDir -maxdepth 1 -name '*.ts' -print -quit)"
+  test -d $ctxDir && test -n "$(find $ctxDir -maxdepth 3 -name '*.ts' -print -quit)"
 }
 
 if detect_typescript $1 ; then
